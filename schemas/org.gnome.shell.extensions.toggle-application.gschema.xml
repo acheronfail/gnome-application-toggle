@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+	<schema id="org.gnome.shell.extensions.toggle-application" path="/org/gnome/shell/extensions/toggle-application/">
+		<key name="toggle-key" type="as">
+			<default><![CDATA[['F1']]]></default>
+			<summary>Toggle key</summary>
+		</key>
+		<key name="wm-class" type="s">
+			<default>"kitty"</default>
+			<summary>WM Class</summary>
+		</key>
+		<key name="app-path" type="s">
+			<default>"/usr/bin/kitty"</default>
+			<summary>Application Path</summary>
+		</key>
+	</schema>
+</schemalist>

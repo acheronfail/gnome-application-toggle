@@ -1,0 +1,9 @@
+{
+  "name": "Toggle Application",
+  "description": "Toggles/launches an Application",
+  "uuid": "toggle-application@acheronfail.com",
+  "settings-schema": "org.gnome.shell.extensions.toggle-application",
+  "shell-version": [
+    "3.38", "40"
+  ]
+}
