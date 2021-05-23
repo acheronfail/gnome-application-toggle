@@ -11,12 +11,9 @@ const Convenience = Self.imports.convenience;
 class Extension {
 	constructor() {
 		this.settings = Convenience.getSettings();
-		log('XXX', this.settings.get_string("wm-class"))
 	}
 
 	_toggleApplication() {
-		log('XXX', this.settings.get_string("wm-class"))
-
 		if (!this.cached_window_actor || !this.cached_window_actor.metaWindow || !this.cached_window_actor.metaWindow.get_workspace) {
 			let windows = global.get_window_actors().filter(actor => {
 				return actor.metaWindow.get_wm_class() === this.settings.get_string("wm-class");
@@ -54,7 +51,6 @@ class Extension {
 	}
 
 	enable() {
-		log('XXX', this.settings.get_string("wm-class"))
 		this.cached_window_actor = null;
 		let ModeType = Shell.hasOwnProperty('ActionMode') ? Shell.ActionMode : Shell.KeyBindingMode;
 		Main.wm.addKeybinding('toggle-key', this.settings, Meta.KeyBindingFlags.NONE, ModeType.NORMAL | ModeType.OVERVIEW, this._toggleApplication.bind(this));
